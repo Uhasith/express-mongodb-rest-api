@@ -4,7 +4,10 @@ const Contact = require("../models/contactModel");
 //@route GET /api/contacts
 //@access private
 const getContacts = asyncHandler(async (req, res) => {
-  const contacts = await Contact.find({ user_id: req.user.id });
+    const contacts = await Contact.find({ user_id: req.user.id }).populate(
+      "user_id",
+      "username email -_id"
+    );
   res.status(200).json(contacts);
 });
 

@@ -8,8 +8,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "Dipesh Malvia",
-  "license": "MIT",
+  "author": "Hasith Udayanga",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
